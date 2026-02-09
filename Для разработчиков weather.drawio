@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 YaBrowser/25.12.0.0 Safari/537.36" version="29.3.8">
+  <diagram name="Weather Aggregator" id="fuhPC6aL3mTmnGXJ8hKS">
+    <mxGraphModel dx="1358" dy="1916" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="M9TBRZxp1zljm-eBZ0Sc-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5f4e6;" value="Старт приложения\nmain()" vertex="1">
+          <mxGeometry height="80" width="180" x="670" y="-450" as="geometry" />
+        </mxCell>
+        <mxCell id="M9TBRZxp1zljm-eBZ0Sc-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f0fe;" value="Инициализация GUI\nWeatherApp.__init__" vertex="1">
+          <mxGeometry height="90" width="260" x="630" y="-310" as="geometry" />
+        </mxCell>
+        <mxCell id="M9TBRZxp1zljm-eBZ0Sc-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff9e6;" value="Создание интерфейса\ncreate_widgets()" vertex="1">
+          <mxGeometry height="90" width="260" x="630" y="-120" as="geometry" />
+        </mxCell>
+        <mxCell id="M9TBRZxp1zljm-eBZ0Sc-4" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fdecea;" value="Нажата кнопка\n«Обновить данные»" vertex="1">
+          <mxGeometry height="100" width="220" x="650" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="M9TBRZxp1zljm-eBZ0Sc-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;" value="Запуск потока\nget_weather_data()" vertex="1">
+          <mxGeometry height="90" width="260" x="630" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="M9TBRZxp1zljm-eBZ0Sc-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;" value="10 источников погоды\nWeatherScraper.parse_*()" vertex="1">
+          <mxGeometry height="120" width="300" x="610" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="M9TBRZxp1zljm-eBZ0Sc-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede7f6;" value="Очередь Queue\nlog / data / avg / done" vertex="1">
+          <mxGeometry height="110" width="260" x="630" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="M9TBRZxp1zljm-eBZ0Sc-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;" value="check_queue()\nОбновление UI\nTreeView / Avg / Log" vertex="1">
+          <mxGeometry height="120" width="300" x="630" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="M9TBRZxp1zljm-eBZ0Sc-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffde7;" value="calculate_averages()\nСредние значения" vertex="1">
+          <mxGeometry height="100" width="260" x="650" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="M9TBRZxp1zljm-eBZ0Sc-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2f1;" value="Сохранение\nJSON + history" vertex="1">
+          <mxGeometry height="100" width="260" x="650" y="960" as="geometry" />
+        </mxCell>
+        <mxCell id="M9TBRZxp1zljm-eBZ0Sc-11" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#eeeeee;" value="Ожидание\nследующего обновления" vertex="1">
+          <mxGeometry height="80" width="260" x="650" y="1169" as="geometry" />
+        </mxCell>
+        <mxCell id="M9TBRZxp1zljm-eBZ0Sc-12" edge="1" parent="1" source="M9TBRZxp1zljm-eBZ0Sc-1" target="M9TBRZxp1zljm-eBZ0Sc-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M9TBRZxp1zljm-eBZ0Sc-13" edge="1" parent="1" source="M9TBRZxp1zljm-eBZ0Sc-2" target="M9TBRZxp1zljm-eBZ0Sc-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M9TBRZxp1zljm-eBZ0Sc-14" edge="1" parent="1" source="M9TBRZxp1zljm-eBZ0Sc-3" target="M9TBRZxp1zljm-eBZ0Sc-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M9TBRZxp1zljm-eBZ0Sc-15" edge="1" parent="1" source="M9TBRZxp1zljm-eBZ0Sc-4" target="M9TBRZxp1zljm-eBZ0Sc-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M9TBRZxp1zljm-eBZ0Sc-16" edge="1" parent="1" source="M9TBRZxp1zljm-eBZ0Sc-5" target="M9TBRZxp1zljm-eBZ0Sc-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M9TBRZxp1zljm-eBZ0Sc-17" edge="1" parent="1" source="M9TBRZxp1zljm-eBZ0Sc-6" target="M9TBRZxp1zljm-eBZ0Sc-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M9TBRZxp1zljm-eBZ0Sc-18" edge="1" parent="1" source="M9TBRZxp1zljm-eBZ0Sc-7" target="M9TBRZxp1zljm-eBZ0Sc-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M9TBRZxp1zljm-eBZ0Sc-19" edge="1" parent="1" source="M9TBRZxp1zljm-eBZ0Sc-8" target="M9TBRZxp1zljm-eBZ0Sc-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M9TBRZxp1zljm-eBZ0Sc-20" edge="1" parent="1" source="M9TBRZxp1zljm-eBZ0Sc-9" target="M9TBRZxp1zljm-eBZ0Sc-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M9TBRZxp1zljm-eBZ0Sc-21" edge="1" parent="1" source="M9TBRZxp1zljm-eBZ0Sc-10" target="M9TBRZxp1zljm-eBZ0Sc-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
